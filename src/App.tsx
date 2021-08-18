@@ -1,31 +1,27 @@
-import React, { useEffect } from "react"
-import logo from "./logo.svg"
-import "./App.css"
-import { getRules } from "./effects"
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import { getRules } from "./effects";
+import { RuleContents } from "./consts/types";
 
 function App() {
-  useEffect(() => {
-    getRules()
-  }, [])
+  const [tableOfContents, setTableOfContents] = useState<
+    RuleContents["tableOfContents"]
+  >();
+  const [chaptersAndRules, setChaptersAndRules] = useState<
+    RuleContents["chaptersAndRules"]
+  >();
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  )
+  // callback for rule fetch effect
+  const onFetch = ({ tableOfContents, chaptersAndRules }: RuleContents) => {
+    setTableOfContents(tableOfContents);
+    setChaptersAndRules(chaptersAndRules);
+  };
+
+  useEffect(() => {
+    getRules(onFetch);
+  }, []);
+
+  return <div></div>;
 }
 
-export default App
+export default App;
