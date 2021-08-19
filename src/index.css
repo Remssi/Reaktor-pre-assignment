@@ -19,10 +19,12 @@ code {
 }
 
 .container {
+  align-items: flex-start;
   display: flex;
   justify-content: space-between;
   margin: auto;
   width: 1400px;
   max-width: 80%;
   min-width: 300px;
+  min-height: 100vh;
 }
