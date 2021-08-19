@@ -33,6 +33,9 @@ function App() {
   if (!tableOfContents[currentChapter] && !chaptersAndRules[currentChapter])
     return <div>Loading...</div>;
 
+  // always scroll to top after render
+  window.scrollTo(0, 0);
+
   return (
     <div>
       <Header setSearchText={setSearchText} />
