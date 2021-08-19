@@ -10,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-y: scroll;
-  background-color: #eff7eb;
+  font-size: 13px;
 }
 
 code {
@@ -25,88 +25,4 @@ code {
   width: 1400px;
   max-width: 80%;
   min-width: 300px;
-}
-
-.tableOfContents {
-  position: sticky;
-  top: 35px;
-  flex: 0 0 15%;
-  max-height: 500px;
-  overflow-y: scroll;
-  background-color: #d5ebce;
-  border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;
-}
-
-.chapterContent {
-  flex: 0 0 82%;
-  background-color: #d5ebce;
-  min-height: 100vh;
-}
-
-.collectionName {
-  font-size: 1.1em;
-  background-color: #84bd71;
-  margin: 0;
-  font-style: italic;
-  padding: 0.1em 0.2em;
-}
-
-.chapterLink {
-  display: block;
-  padding: 0.3em 0 0.3em 0.5em;
-}
-
-.chapterLink-active {
-  background-color: #a9d194;
-}
-
-.chapterLink:first-of-type {
-  margin-top: 0.3em;
-}
-
-.chapterLink:last-of-type {
-  margin-bottom: 1em;
-}
-
-.chapterTitle {
-  font-size: 1.5em;
-  font-style: italic;
-  margin: 0;
-  background-color: #a9d194;
-  padding: 0.3em 0.2em;
-}
-
-.rule {
-  padding: 0.5em;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  transition: background-color 0.2s ease;
-}
-
-.rule:last-of-type {
-  margin-bottom: 10em;
-}
-
-.rule:hover {
-  background-color: #bae0ad;
-}
-
-.ruleHeader {
-  margin: 0;
-  font-size: 1em;
-}
-
-.ruleText {
-  margin: 0;
-}
-
-.additionalText {
-  margin: 0;
-  font-style: italic;
-  font-size: 0.95em;
-  color: rgba(0, 0, 0, 0.8);
-}
-
-.additionalText:first-of-type {
-  color: yellow;
 }

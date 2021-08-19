@@ -1,5 +1,6 @@
 import React from "react";
 import Rule from "./Rule";
+import "./chapterContent.css";
 
 interface Props {
   currentChapterRules: { text: string; additionalTexts: string[] }[];

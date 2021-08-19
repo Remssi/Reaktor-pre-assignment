@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import { getRules } from "./effects";
 import { RuleContents } from "./consts/types";
-import { ChapterContent, TableOfContents } from "./components";
+import { ChapterContent, Footer, Header, TableOfContents } from "./components";
 
 function App() {
   const [tableOfContents, setTableOfContents] = useState<
@@ -32,13 +32,19 @@ function App() {
     return <div>Loading...</div>;
 
   return (
-    <div className="container">
-      <TableOfContents
-        currentChapter={currentChapter}
-        chapterCollections={tableOfContents}
-        handleChapterChange={handleChapterChange}
-      />
-      <ChapterContent currentChapterRules={chaptersAndRules[currentChapter]} />
+    <div>
+      <Header />
+      <div className="container">
+        <TableOfContents
+          currentChapter={currentChapter}
+          chapterCollections={tableOfContents}
+          handleChapterChange={handleChapterChange}
+        />
+        <ChapterContent
+          currentChapterRules={chaptersAndRules[currentChapter]}
+        />
+      </div>
+      <Footer />
     </div>
   );
 }

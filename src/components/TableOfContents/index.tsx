@@ -1,6 +1,7 @@
 import React from "react";
 import { RuleContents } from "../../consts/types";
 import ChapterLink from "./ChapterLink";
+import "./tableOfContents.css";
 
 interface Props {
   currentChapter: string;

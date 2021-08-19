@@ -1,0 +1,49 @@
+.chapterContent {
+  flex: 0 0 82%;
+  background-color: #d5ebce;
+  min-height: 100vh;
+  border-radius: 6px;
+}
+
+.chapterTitle {
+  border-radius: 6px 6px 0 0;
+  font-size: 1.5em;
+  font-style: italic;
+  margin: 0;
+  background-color: #a9d194;
+  padding: 0.3em 0.2em;
+}
+
+.rule {
+  padding: 0.5em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  transition: background-color 0.2s ease;
+}
+
+.rule:last-of-type {
+  margin-bottom: 10em;
+}
+
+.rule:hover {
+  background-color: #bae0ad;
+}
+
+.ruleHeader {
+  margin: 0;
+  font-size: 1em;
+}
+
+.ruleText {
+  margin: 0;
+}
+
+.additionalText {
+  margin: 0;
+  font-style: italic;
+  font-size: 0.95em;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.additionalText:first-of-type {
+  color: yellow;
+}
