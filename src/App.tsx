@@ -12,7 +12,7 @@ function App() {
     RuleContents["chaptersAndRules"]
   >({});
 
-  const [currentChapter, setCurrentChapter] = useState("107");
+  const [currentChapter, setCurrentChapter] = useState("100");
 
   // callback for rule fetch effect
   const onFetch = ({ tableOfContents, chaptersAndRules }: RuleContents) => {
@@ -34,7 +34,8 @@ function App() {
   return (
     <div className="container">
       <TableOfContents
-        chapters={tableOfContents}
+        currentChapter={currentChapter}
+        chapterCollections={tableOfContents}
         handleChapterChange={handleChapterChange}
       />
       <ChapterContent currentChapterRules={chaptersAndRules[currentChapter]} />
