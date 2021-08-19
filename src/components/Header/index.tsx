@@ -1,12 +1,15 @@
 import React from "react";
+import SearchBar from "../SearchBar";
 import "./header.css";
 
-interface Props {}
+interface Props {
+  setSearchText: (text: string) => void;
+}
 
-const Header: React.FC<Props> = () => {
+const Header: React.FC<Props> = ({ setSearchText }) => {
   return (
     <div className="header">
-      <div></div>
+      <SearchBar setSearchText={setSearchText} />
     </div>
   );
 };

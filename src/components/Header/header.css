@@ -1,8 +1,12 @@
 .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #d5ebce;
   height: 60px;
   width: 100%;
   position: sticky;
   top: 0;
   margin-bottom: 4em;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 5px;
 }

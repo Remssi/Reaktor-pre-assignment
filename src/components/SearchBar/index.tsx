@@ -1,11 +1,17 @@
 import React from "react";
+import "./searchBar.css";
 
-interface Props {}
+interface Props {
+  setSearchText: (text: string) => void;
+}
 
-const SearchBar: React.FC<Props> = () => {
+const SearchBar: React.FC<Props> = ({ setSearchText }) => {
   return (
-    <div>
-      <div></div>
+    <div className="searchBar">
+      <input
+        placeholder="Filter rules"
+        onChange={e => setSearchText(e.target.value.toLowerCase())}
+      />
     </div>
   );
 };

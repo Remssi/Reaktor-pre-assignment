@@ -14,6 +14,8 @@ function App() {
 
   const [currentChapter, setCurrentChapter] = useState("100");
 
+  const [searchText, setSearchText] = useState("");
+
   // callback for rule fetch effect
   const onFetch = ({ tableOfContents, chaptersAndRules }: RuleContents) => {
     setTableOfContents(tableOfContents);
@@ -33,7 +35,7 @@ function App() {
 
   return (
     <div>
-      <Header />
+      <Header setSearchText={setSearchText} />
       <div className="container">
         <TableOfContents
           currentChapter={currentChapter}
@@ -42,6 +44,7 @@ function App() {
         />
         <ChapterContent
           currentChapterRules={chaptersAndRules[currentChapter]}
+          searchText={searchText}
         />
       </div>
       <Footer />

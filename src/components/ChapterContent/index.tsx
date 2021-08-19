@@ -4,9 +4,13 @@ import "./chapterContent.css";
 
 interface Props {
   currentChapterRules: { text: string; additionalTexts: string[] }[];
+  searchText: string;
 }
 
-const ChapterContent: React.FC<Props> = ({ currentChapterRules }) => {
+const ChapterContent: React.FC<Props> = ({
+  currentChapterRules,
+  searchText,
+}) => {
   return (
     <div className="chapterContent">
       {Object.values(currentChapterRules).map((rule, index) => {
@@ -18,7 +22,8 @@ const ChapterContent: React.FC<Props> = ({ currentChapterRules }) => {
             </h1>
           );
 
-        return <Rule key={index} rule={rule} />;
+        if (rule.text.toLowerCase().includes(searchText))
+          return <Rule key={index} rule={rule} />;
       })}
     </div>
   );

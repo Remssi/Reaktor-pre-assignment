@@ -21,7 +21,7 @@
 }
 
 .rule:last-of-type {
-  margin-bottom: 10em;
+  border-bottom: none;
 }
 
 .rule:hover {
