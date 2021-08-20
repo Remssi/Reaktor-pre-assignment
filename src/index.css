@@ -4,13 +4,13 @@
 
 body {
   margin: 0;
+  font-size: 13px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-y: scroll;
-  font-size: 13px;
 }
 
 code {
@@ -19,10 +19,10 @@ code {
 }
 
 .container {
-  align-items: flex-start;
+  margin: auto;
   display: flex;
   justify-content: space-between;
-  margin: auto;
+  align-items: flex-start;
   width: 1400px;
   max-width: 80%;
   min-width: 300px;
