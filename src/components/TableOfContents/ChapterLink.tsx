@@ -15,7 +15,7 @@ const ChapterLink: React.FC<Props> = ({
 }) => {
   return (
     <a
-      href="#"
+      href="/"
       className={active ? "chapterLink chapterLink-active" : "chapterLink"}
       onClick={e => {
         e.preventDefault();

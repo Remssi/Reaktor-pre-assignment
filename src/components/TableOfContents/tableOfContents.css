@@ -1,12 +1,13 @@
 .tableOfContents {
   position: sticky;
   top: 115px;
-  flex: 0 0 15%;
+  flex: 0 0 210px;
   max-height: 500px;
   overflow-y: scroll;
   background-color: #d5ebce;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;
+  margin-right: 2em;
 }
 
 .collectionName {
@@ -32,4 +33,15 @@
 
 .chapterLink:last-of-type {
   margin-bottom: 1em;
+}
+
+@media only screen and (max-width: 767px) {
+  .tableOfContents {
+    position: initial;
+    margin-right: 0;
+    margin-bottom: 2em;
+    top: 75px;
+    width: 210px;
+    flex: 0 0 auto;
+  }
 }

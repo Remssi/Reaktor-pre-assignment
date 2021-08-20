@@ -1,5 +1,5 @@
 .chapterContent {
-  flex: 0 0 82%;
+  flex: 0 1 100%;
   background-color: #d5ebce;
   border-radius: 6px;
 }
@@ -21,10 +21,15 @@
 
 .rule:last-of-type {
   border-bottom: none;
+  border-radius: 0 0 6px 6px;
 }
 
 .rule:hover {
   background-color: #bae0ad;
+}
+
+.rule:last-of-type:hover {
+  border-radius: 0 0 6px 6px;
 }
 
 .ruleHeader {

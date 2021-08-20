@@ -24,6 +24,8 @@ const ChapterContent: React.FC<Props> = ({
 
         if (rule.text.toLowerCase().includes(searchText))
           return <Rule key={index} rule={rule} />;
+
+        return null;
       })}
     </div>
   );
