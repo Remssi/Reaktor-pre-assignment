@@ -8,10 +8,9 @@ export const getRules = (
   onFetch: ({ tableOfContents, chaptersAndRules }: RuleContents) => void,
 ): void => {
   // use proxy in development, use direct url in production
+  // "/2021/downloads/MagicCompRules%2020210419.txt"
   fetch(
-    !process.env.NODE_ENV || process.env.NODE_ENV === "development"
-      ? "/2021/downloads/MagicCompRules%2020210419.txt"
-      : "https://media.wizards.com/2021/downloads/MagicCompRules%2020210419.txt",
+    "https://media.wizards.com/2021/downloads/MagicCompRules%2020210419.txt",
   )
     .then(response => {
       return response.text();
