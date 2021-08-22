@@ -4,6 +4,7 @@ import { getRules } from "./effects";
 import { RuleContents } from "./consts/types";
 import { ChapterContent, Footer, Header, TableOfContents } from "./components";
 
+// ! to bypass cors restriction in development, add: "proxy": "https://media.wizards.com", to package.json file
 function App() {
   const [tableOfContents, setTableOfContents] = useState<
     RuleContents["tableOfContents"]
