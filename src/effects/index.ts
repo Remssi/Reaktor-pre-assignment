@@ -7,10 +7,10 @@ import { parseRules } from "../utils";
 export const getRules = (
   onFetch: ({ tableOfContents, chaptersAndRules }: RuleContents) => void,
 ): void => {
-  // use proxy in development, use direct url in production
-  // "/2021/downloads/MagicCompRules%2020210419.txt"
+  // use own proxy here
   fetch(
-    "https://media.wizards.com/2021/downloads/MagicCompRules%2020210419.txt",
+    process.env.PROXY_URL +
+      "https://media.wizards.com/2021/downloads/MagicCompRules%2020210419.txt",
   )
     .then(response => {
       return response.text();
