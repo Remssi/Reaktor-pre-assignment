@@ -9,7 +9,7 @@ export const getRules = (
 ): void => {
   // use own proxy here
   fetch(
-    process.env.PROXY_URL +
+    process.env.REACT_APP_PROXY_URL +
       "https://media.wizards.com/2021/downloads/MagicCompRules%2020210419.txt",
   )
     .then(response => {
